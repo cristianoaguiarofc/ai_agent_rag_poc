@@ -16,12 +16,7 @@ public class ChatClientConfiguration {
     }
 
     @Bean
-    public ChatClient chatClient(
-            ChatClient.Builder builder,
-            ChatMemory chatMemory
-    ) {
-        return builder
-                .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
-                .build();
+    public ChatClient chatClient(ChatClient.Builder builder) {
+        return builder.build();
     }
 }
